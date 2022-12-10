@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork3</title>
+  </head>
+  <body>
+    <script>
+      console.log("==========task1==========");
+
+      let userName = prompt("Enter your name");
+      let congratulation = "";
+
+      for (let i = 0; i < 4; i++) {
+        if (i === 2) {
+          congratulation += `Happy birthday to you, dear ${userName}\n`;
+        } else {
+          congratulation += "Happy birthday to you\n";
+        }
+      }
+      console.log(congratulation);
+
+      console.log("==========task2==========");
+
+      let symbol = prompt("Enter number"); // количество повторений
+      let string = ""; // изначально пустая строка
+      for (let i = 0; i < symbol; i++) {
+        string += ".#";
+      }
+      console.log(string);
+
+      console.log("==========task3==========");
+
+      let number = prompt("Enter number");
+      let result = 0;
+
+      if (isNaN(number) || number === "") {
+        console.log("Invalid. You should enter a number");
+      } else {
+        for (let i = 0; i < number; i++) {
+          if (i % 2 !== 0) {
+            result += i;
+          }
+        }
+      }
+      console.log(result);
+
+      console.log("==========task4==========");
+
+      let rand = 0;
+      let iteration = 0;
+      while (true) {
+        rand = Math.random();
+        iteration++;
+        if (rand > 0.7) {
+          console.log(`Loop was finished because of ${rand}`);
+          break;
+        }
+        console.log(`Number of iterations: ${iteration}`);
+      }
+
+      console.log("==========task5==========");
+      let resultLoop = "";
+      for (let i = 0; i < 50; i++) {
+        if (i % 3 === 0) {
+          console.log("Div by 3");
+        } else if (i % 5 === 0) {
+          console.log("Div by 5");
+        } else if (i % 5 === 0 && i % 3 === 0) {
+          console.log("Div by 5 and 3");
+        } else {
+          console.log(i);
+        }
+      }
+
+      console.log("==========task6==========");
+
+      let date = new Date();
+      console.log(date);
+    </script>
+  </body>
+</html>
+
